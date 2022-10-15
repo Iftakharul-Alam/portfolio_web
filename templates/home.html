@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center"
+  style="background: url({% if about.cover_photo %}{{ about.cover_photo.url }}{% else %}{% static 'img/hero-bg.jpg' %}{% endif %}) top center;"
+  >
+    <div class="hero-container" data-aos="fade-in">
+      <h1>{{ about.name }}</h1>
+      <p>I'm <span class="typed" data-typed-items="{{ about.key_points }}"></span></p>
+    </div>
+  </section><!-- End Hero -->
+{% endblock %}
